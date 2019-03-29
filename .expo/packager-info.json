@@ -1,9 +1,9 @@
 {
-  "devToolsPort": 19002,
+  "expoServerNgrokUrl": "https://p4-kw7.shafkat.awesome-places.exp.direct",
+  "packagerNgrokUrl": "https://packager.p4-kw7.shafkat.awesome-places.exp.direct",
+  "ngrokPid": 608,
   "expoServerPort": null,
-  "packagerPort": null,
-  "packagerPid": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null
+  "devToolsPort": 19002,
+  "packagerPort": 19001,
+  "packagerPid": 3952
 }

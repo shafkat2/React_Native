@@ -1,4 +1,4 @@
-import {ADD_PLACE, DELETE_PLACE, SELECT_PLACE, DESELECT_PLACE} from '../action/Actiontypes';
+import {ADD_PLACE, DELETE_PLACE, SELECT_PLACE, DESELECT_PLACE,NAME_CHANGE} from '../action/Actiontypes';
 
 
 const initialState = {
@@ -13,7 +13,13 @@ const initialState = {
 
 export const reducer = (state = initialState, action) =>{
 
+    
     switch(action.type){
+        case NAME_CHANGE:
+            return{
+                ...state,
+                placeName: action.placeName
+            }
         case ADD_PLACE:
             return{
                 ...state,
@@ -24,6 +30,7 @@ export const reducer = (state = initialState, action) =>{
                         uri:
                         "https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/06/04/12/cool-woman-2018.jpg?w968"
                     }
+                    
                 })
             };
         case DELETE_PLACE:

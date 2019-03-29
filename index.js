@@ -1,10 +1,10 @@
 import React from 'react';
 import { AppRegistry } from 'react-native';
-import {Provider} from 'react-redux';
+import { Provider } from 'react-redux';
 import App from './App';
-import configureStore from './src/store/reducer/ConfigureStore';
+import ConfigureStore from './src/store/reducer/ConfigureStore';
 
-const store = configureStore();
+const store = ConfigureStore();
 
 const RNRedux =() => {
     <Provider store ={store}>

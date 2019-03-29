@@ -9,6 +9,14 @@ export const addPlace = (placeName)=>{
     };
 }
 
+export const nameChanger = (placeName)=>{
+
+    return {
+        type: NAME_CHANGE,
+        placeName : placeName
+    };
+}
+
 
 export const deletePlace = ()=>{
 
@@ -26,11 +34,7 @@ export const selectPlace = (key)=>{
     };
 }
 
-<<<<<<< HEAD
 export const deselectPlace = (placeName)=>{
-=======
-export const deselcetPlace = (placeName)=>{
->>>>>>> 724b4ceb1907e83df6585f0a772263f0b0c8aa41
 
     return {
         type: DESELECT_PLACE,
