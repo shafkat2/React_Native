@@ -17,7 +17,7 @@ class App extends React.Component {
   }
 
   placeNameChangerHandler = (val)=>{
-      this.props.onChangePlace(val);
+      this.props.onNameChanger(val);
   };
 
   placeSelectedHandler  = key =>{
@@ -34,6 +34,7 @@ class App extends React.Component {
   render() {
     
     return (
+      
       <View style={styles.container}>
             <PlaceDetail  selectedData = {this.props.placeSelected} onItemDeleted = {this.placeDeletedHandler} onModalClosed = {this.modalClosedHandler}/>
             <PlaceInput name = {this.props.text} onChangeText = {this.placeNameChangerHandler} onPress = {this.placeSubmitHandler}/>
@@ -61,7 +62,7 @@ const mapsStatetoProps = state =>{
     return{
       text: state.places.text,
       places: state.places.places,
-      selectedPlace:state.places.placeSelected,
+      placeSelected:state.places.placeSelected,
     };
 };
 

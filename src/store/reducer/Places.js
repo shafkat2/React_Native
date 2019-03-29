@@ -18,7 +18,7 @@ export const reducer = (state = initialState, action) =>{
         case NAME_CHANGE:
             return{
                 ...state,
-                placeName: action.placeName
+                text: action.Name
             }
         case ADD_PLACE:
             return{
@@ -27,8 +27,7 @@ export const reducer = (state = initialState, action) =>{
                     key: Math.random.toString(),
                     name: action.placeName,
                     image: {
-                        uri:
-                        "https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/06/04/12/cool-woman-2018.jpg?w968"
+                        uri:"https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/06/04/12/cool-woman-2018.jpg?w968"
                     }
                     
                 })
