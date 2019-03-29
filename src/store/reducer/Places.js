@@ -46,7 +46,7 @@ export const reducer = (state = initialState, action) =>{
             return{
                 ...state,
                 placeSelected: state.places.find(place =>{
-                    return place.key === action.key;
+                    return place.key === action.placekey;
                 })
             };
         case DESELECT_PLACE:

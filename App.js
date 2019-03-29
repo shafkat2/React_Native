@@ -61,7 +61,7 @@ const mapsStatetoProps = state =>{
     return{
       text: state.places.text,
       places: state.places.places,
-      selectedPlace:state.places.selectedPlace
+      selectedPlace:state.places.placeSelected,
     };
 };
 

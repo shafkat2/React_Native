@@ -1,5 +1,6 @@
 import React from 'react';
-import { AppRegistry } from 'react-native';
+import { registerRootComponent } from 'expo';
+
 import { Provider } from 'react-redux';
 import App from './App';
 import ConfigureStore from './src/store/reducer/ConfigureStore';
@@ -7,13 +8,16 @@ import ConfigureStore from './src/store/reducer/ConfigureStore';
 const store = ConfigureStore();
 
 const RNRedux =() => {
+    return(
     <Provider store ={store}>
         <App/>
     </Provider>
+    )
 }
+
  
 
 
-AppRegistry.registerComponent('Awesome_places',()=> RNRedux);
+registerRootComponent(RNRedux);
 
 //"main": "node_modules/expo/AppEntry.js",
