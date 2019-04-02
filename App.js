@@ -12,9 +12,9 @@ import {addPlace, deletePlace, selectPlace, deselectPlace,nameChanger } from './
 
 class App extends React.Component {
 
-  placeSubmitHandler = (placename )=>{
-    this.props.onAddPlace(placename);
-  }
+  placeSubmitHandler = ()=>{
+    this.props.onAddPlace();
+  };
 
   placeNameChangerHandler = (val)=>{
       this.props.onNameChanger(val);
@@ -26,13 +26,13 @@ class App extends React.Component {
 
   placeDeletedHandler = () =>{
       this.props.onDeletePlace();
-  }
+  };
   modalClosedHandler = () => {
       this.props.onDeselectPlace();
-  }
+  };
 
   render() {
-    
+        
     return (
       
       <View style={styles.container}>
@@ -68,11 +68,11 @@ const mapsStatetoProps = state =>{
 
 const mapDispatchtoProps = dispatch =>{
   return{
-    onAddPlace: (name) => dispatch(addPlace(name)),
+    onAddPlace: () => dispatch(addPlace()),
     onDeletePlace: () => dispatch(deletePlace()),
     onSelectPlace: (key) => dispatch(selectPlace(key)),
     onDeselectPlace: () => dispatch(deselectPlace()),
-    onNameChanger: (name) => dispatch(nameChanger(name)),
+    onNameChanger: (text) => dispatch(nameChanger(text)),
 
   }
 }

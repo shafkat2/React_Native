@@ -3,7 +3,7 @@ import { StyleSheet,FlatList} from 'react-native';
 import ListItem from './List_Item';
 
 const PlaceList= (props) =>{
- 
+    
     return (
         <FlatList style = {styles.listContainer} 
                 data = {props.places}
@@ -11,7 +11,8 @@ const PlaceList= (props) =>{
                     <ListItem 
                     placeName = {info.item.name}  
                     placeImage = {info.item.image}
-                    ontItemPressed = {() => props.onSelectedHandler(info.item.key)}/>}
+                    ontItemPressed = {(e) =>{
+                         props.onSelectedHandler(info.item.key)}}/>}
         />
             
 

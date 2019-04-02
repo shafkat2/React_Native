@@ -5,12 +5,12 @@ import {View, StyleSheet,TextInput,Button} from 'react-native';
 const PlaceInput = (props) =>(
 
 
-
+        
     <View style={styles.inputContainer}>
             <TextInput 
                 style = {styles.placeInput}
                 placeholder = "AN AWSOME PLACEHOLDER"
-                value = {props.name} 
+                value = {props.text} 
                 onChangeText = {props.onChangeText}
                 /> 
         <Button title = "ADDD" onPress = {props.onPress} style = {styles.placebutton} />  
